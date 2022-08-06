@@ -1,0 +1,81 @@
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+  <div class="wrapper wrapper--w790">
+      <div class="card card-5">
+          <div class="card-heading">
+              <h2 class="title">Customer Information Edit Form</h2>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+                <div class="form-row m-b-55">
+                  <div class="name">Customer Id</div>
+                  <div class="value">
+                      <div>
+                          <div class="col-7">
+                              <div class="input-group-desc">
+                                  <input type="number" class="input--style-5" formControlName="userId"  name="userId"
+                                  id="userId"
+                                  readonly>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                  <div class="form-row m-b-55">
+                      <div class="name">Name</div>
+                      <div class="value">
+                          <div class="row row-space">
+                              <div class="col-12">
+                                  <div class="input-group-desc">
+                                      <input class="input--style-5" type="text" formControlName="userName"  name="userName"
+                                      id="userName" 
+                                      >
+                                      <span *ngIf="editForm.get('userName')?.hasError('required')">
+                                        username should not be null
+                                    </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="name">Phone Number</div>
+                      <div class="value">
+                          <div class="input-group">
+                              <input class="input--style-5" type="text" formControlName="phoneNo"  name="phoneNo"
+                              id="phoneNo" >
+                              <p *ngIf="editForm.get('phoneNo')?.hasError('required')">
+                                phone should not be null
+                            </p>
+                            <p *ngIf="editForm.get('phoneNo')?.hasError('minlength')">
+                              phone number should be of length 10 at least
+                            </p>
+                          <p *ngIf="editForm.get('phoneNo')?.hasError('min')">
+                              phone should not be negative
+                          </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="name">Email</div>
+                      <div class="value">
+                          <div class="input-group">
+                              <input class="input--style-5" type="text" formControlName="emailID"  name="emailID"
+                              id="emailID" required>
+                              <span *ngIf="editForm.get('emailID')?.hasError('required')">
+                                email id should not be null
+                            </span>
+                            <!-- <span *ngIf="editForm.get('emailID')?.hasError('email')">
+                                email id's format should be correct
+                            </span> -->
+                          </div>
+                      </div>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                      <button class="btn btn--radius-2 btn--red" type="submit" [disabled]=!editForm.valid>Update Info</button>
+                      <button class="btn btn--radius-2 btn--red" type="submit" routerLink='/customers'>Back</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

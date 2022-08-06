@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+ul{
+  list-style-type: none;
+}
+
+.container{ 
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;  
+  padding: 0%;
+  margin-top: 6em;
+}
+.header{
+  width: 50%;
+  height: 80px;
+  position: relative;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-left: 25em;
+  font-size: 1.5em;
+  font-weight: 500; 
+  background: linear-gradient(to right,#0e2433,#3792cb);
+  color: white;
+  padding-top: 0.85em;
+  border-radius: 1em;
+  font-family:Roboto;
+}
+.hero{
+  position: relative;
+  background: white;
+  margin-top: 2em;
+  width: 50%;
+  height: 500px;
+  margin-left: 25em;
+  border-radius: 1.5em;
+  font-size: 1.5em;
+  font-weight: 550;
+  font-family:Roboto;
+  color:#254e97;    
+  border-width: 5px;
+  border:solid #0e2433;
+  box-shadow: 10px 10px 10px #0e2433;
+}
+.hero input{
+  width: 37%;
+  height: 35px; 
+  border-radius: 5em;
+  border:2.5px solid #254e97;    
+  font-size: 0.75em;
+  font-weight: 500;
+  font-family:Roboto;
+}
+#i-rate{
+  margin-top: 0.75em;
+}
+#accId{
+  margin-top: 0.75em;
+}
+#penalty{
+  margin-top: 0.75em;
+}
+#min-balance{
+    margin-top: 0.75em;
+}
+#i-rate label{
+  margin-left: 0em;
+  margin-right: 4.25em;
+}
+#accId label{
+  margin-left: 0em;
+  margin-right: 8em;
+}
+#penalty label{
+    margin-left: 0em;
+    margin-right: 3.5em;  
+}
+#min-balance label{
+    margin-right: 1em;
+}
+img{
+  width: 30%;
+  height: 150px;
+  margin-bottom: 1.5em;
+  margin-left: 0%;
+  margin-top: 1em;
+}
+#mbal-btn:hover{
+  background-color: #254e97;
+  color: white;
+}
+#mbal-btn{
+  border: 3px solid #254e97;  
+  border-radius: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  font-family:Roboto;
+  color: #254e97;
+  margin-top: 2em;
+  margin-left: 0em;    
+  width: 20%;
+}
+
+
+

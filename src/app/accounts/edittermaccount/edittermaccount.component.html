@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="header">
+        Welcome To Edit Term Account Portal
+    </div>
+    <div class="hero">
+        <div class="icon">
+            <img src="../../../assets/images/edit_saving_icon.png" alt="">
+        </div>
+        <form [formGroup]="editTermForm" (ngSubmit)="editTerm()">
+            <div class="basic-container">
+                <div class="acc-id" id="acc-id">
+                    <label for="acc-id">Account ID</label>
+                    <input type="number" id="acc-id" formControlName="accountId"/>
+                </div>
+                <div class="interest-rate" id="i-rate">
+                    <label for="i-rate">Set Interest Rate (%)</label>
+                    <input type="number" id="i-rate" formControlName="interestRate"/>
+                </div>
+                <div class="fine" id="fine">
+                    <label for="fine">Set Penalty Amount (INR)</label>
+                    <input type="number" id="fine" formControlName="penalty"/>
+                </div>
+            </div>
+            <div class="duration-container">
+                <div class="duration" id="duration">
+                    <label for="duration">Set Duration (Months)</label>
+                    <input type="number" id="duration" formControlName="months"/>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline" id="accid-btn">Save</button>
+        </form>
+    </div>
+</div>

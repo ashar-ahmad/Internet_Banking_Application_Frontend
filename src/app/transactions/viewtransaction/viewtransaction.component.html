@@ -1,0 +1,92 @@
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+ -->
+
+
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" /> -->
+
+<div style="width:800px; margin:0 auto;">
+    <div class="row ">
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-green-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">Welcome to Transaction Portal</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="center">
+    <input type="number" [(ngModel)]='listFilter' placeholder="Search by Transaction-ID">
+
+    &nbsp; &nbsp;
+
+    <input type="number" [(ngModel)]='listFilter1' placeholder="Search by Account-ID">
+
+    &nbsp; &nbsp;
+
+    <input type="date" [(ngModel)]='listFilter2' placeholder="From">
+
+    &nbsp; &nbsp;
+
+    <input type="date" [(ngModel)]='listFilter3' placeholder="To">
+</div>
+
+<div class="container">
+<div class="card-header" style="background-color: white;">
+    <h3 style="text-align: center; margin-left:50px;color:green; font-size: 20px;">Transaction List
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        &nbsp;&nbsp;&nbsp;
+
+    </h3>
+</div>
+</div>
+
+<div class="container">
+    <div class="card-header" style="background-color: white;">
+        <div class="table-responsive" id="proTeamScroll" tabindex="2"
+            style="height: auto; overflow: hidden; outline: none;">
+            <table class="table table-striped" style="margin-top: 40px;">
+                <thead>
+                    <tr>
+                        <th>Transaction-ID</th>
+                        <th>Account-ID</th>
+                        <th>Transaction Type</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date of Transaction</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor='let transaction of filteredTransactions'>
+                        <td>
+                            {{transaction.transactionId}}
+                        </td>
+                        <td>{{transaction.bankAccount}}</td>
+                        <td>{{transaction.transactionType}}</td>
+                        <td>{{transaction.amount}}</td>
+                        <td>{{transaction.transactionStatus}}</td>
+                        <td>{{transaction.transactionDateTime}}</td>
+
+                    </tr>
+
+
+
+                </tbody>
+            </table>            
+        </div>        
+    </div>
+    <button type="submit" class="btn btn-danger"
+style="width:100px;height:50px; margin-left: 600px;border-radius: 15px;margin-top: 10px; " routerLink="/customerhome"> 
+  Back</button>
+</div>

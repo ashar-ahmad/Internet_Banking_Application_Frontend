@@ -1,0 +1,82 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12">
+
+            <div class="card" style="margin-top: 100px; margin-left: 200px; margin-bottom: 80px;">
+                <div style="width:800px;">
+                    <div class="row ">
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="card l-bg-green-dark">
+                                <div class="card-statistic-3 p-4">
+                                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                                    <div class="mb-4">
+                                        <h5 class="card-title mb-0" style="font-size:20px">Welcome to Beneficiary Portal</h5>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-header" style="background-color: white;">
+                <h3 style="margin-left:50px;color:green; font-size: 20px;">List Of All Beneficiary
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-success" style="margin-left:800px; padding: 15px;
+                   border-radius: 30px; font-size:18px;"><a class="link-light" routerLink="/customerhome/beneficiaries/add"> Add Beneficary</a></button>
+
+                    &nbsp;&nbsp;&nbsp;
+                    
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive" id="proTeamScroll" tabindex="2"
+                    style="height: 1000px; overflow: hidden; outline: none;">
+                    <table class="table table-striped" style="margin-top: 40px;">
+                        <thead>
+                            <tr style="font-size: 23px; font-weight:bold;">
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Account Number</th>
+                                
+                                <th>IFSC Code</th>
+                                <th>Account Type</th> 
+                                <!-- <th style="color: green;">Edit</th> -->
+                                <th style="color: red;">Delete</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr *ngFor="let beneficiary of beneficiaries">
+                                <td>
+                                    {{beneficiary.beneficiaryId}}
+                                </td>
+                                <td>{{beneficiary.beneficiaryName}}</td>
+                                <td>{{beneficiary.beneficiaryAccNo}}</td>
+                                <td>{{beneficiary.ifsc}}</td>
+                                <td>{{beneficiary.accountType}}</td> 
+                                
+
+                        <td>
+
+                            <button class="btn btn-default" (click)="deleteBeneficiary(beneficiary)"> <a data-toggle="tooltip" title=""
+                                    data-original-title="Delete"  ><i class="far fa-trash-alt"></i></a></button>
+                        </td>
+                            </tr>
+                         
+
+                            
+                        </tbody>
+                    </table>
+                    <button type="submit" class="btn btn-danger"
+                    style="width:100px;height:50px; margin-left: 600px;border-radius: 15px; " routerLink="/customerhome"> 
+                      Back</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

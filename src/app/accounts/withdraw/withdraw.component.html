@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="alert alert-primary" role="alert" id="withdraw-alert">
+    {{remarks}}
+  </div> 
+    <div class="header">
+      Welcome To Withdraw Portal
+    </div>
+    <div class="hero">
+      <div class="icon">
+        <img src="../../../assets/images/withdraw_icon.jpg" alt="">
+      </div>
+      <form [formGroup]="withdrawFrom" (ngSubmit)="withdraw()">
+        <div class="form-group" id="amount">
+          <label for="amount">Amount (INR)</label>
+          <input type="number" id="amount" formControlName="amount"
+          [ngClass]="{'is-invalid':(withdrawFrom.get('amount')?.touched || withdrawFrom.get('amount')?.dirty)
+      && !withdrawFrom.get('amount')?.valid}"/>
+      <span class="invaild-feedback">
+        <span *ngIf="withdrawFrom.get('amount')?.errors?.required" style="color: red;">
+          Please Enter Some Amount
+        </span>
+        <span *ngIf="withdrawFrom.get('amount')?.errors?.min" style="color: red;">
+          Amount must be positive
+        </span>
+      </span>    
+        </div>
+        <div class="form-group" id="a-type">
+          <label for="account-type" class="a-type">Account Type</label>
+          <select id="account-type" class="account-type" formControlName="accountType"
+          [ngClass]="{'is-invalid':(withdrawFrom.get('amount')?.touched || withdrawFrom.get('amount')?.dirty)
+        && !withdrawFrom.get('amount')?.valid}">
+            <option>Savings Account</option>
+            <option>Term Account</option>
+          </select>      
+          <span class="invaild-feedback">
+            <span *ngIf="withdrawFrom.get('accountType')?.errors?.required" style="color: red;">
+              Please Select Some Option
+            </span>
+          </span>    
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-outline" id="submit-btn" [disabled]=!withdrawFrom.valid>Withdraw</button>
+            <button type="button" class="btn btn-outline" id="cancel-btn" routerLink="/home/customerhome">Cancel</button>
+          </div>
+        </div>  
+      </form>
+    </div>
+  </div>

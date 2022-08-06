@@ -1,0 +1,44 @@
+
+
+<div style="width:800px; margin:0 auto;">
+    <div class="row ">
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-green-dark" id="header">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">Welcome to View Balance Portal</h5>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card p-3" id="saving">
+    <div class="d-flex flex-row justify-content-between text-align-center"> <i class="fas fa-ellipsis-v"></i> </div>
+    <p class="text-dark">Saving Account Balance</p>
+    <div class="card-bottom pt-3 px-3 mb-2">
+        <div class="d-flex flex-row justify-content-between text-align-center">
+            <div class="d-flex flex-column"><span>Balance amount</span>
+                <p>&#8377; <span class="text-white">{{savingBal}}</span></p>
+            </div> <button class="btn btn-secondary"><i class="fas fa-arrow-right text-white"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="card p-3" id="term">
+    <div class="d-flex flex-row justify-content-between text-align-center">  <i class="fas fa-ellipsis-v"></i> </div>
+    <p class="text-dark">Term Account Balance</p>
+    <div class="card-bottom pt-3 px-3 mb-2">
+        <div class="d-flex flex-row justify-content-between text-align-center">
+            <div class="d-flex flex-column"><span>Balance amount</span>
+                <p>&#8377; <span class="text-white">{{termBal | number: '1.0-0'}} </span></p>
+            </div> <button class="btn btn-secondary"><i class="fas fa-arrow-right text-white"></i></button>
+        </div>
+    </div>
+</div>
+<div class="back">
+    <button type="button" class="btn btn-outline-primary" id="back_btn" routerLink="/home/customerhome">Back</button>
+</div>

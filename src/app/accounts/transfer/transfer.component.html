@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="alert alert-primary" role="alert" id="transfer-alert">
+        {{remarks}}
+    </div>
+    <div class="header">
+        Welcome To Transfer Portal
+    </div>
+    <div class="hero">
+        <div class="icon">
+            <img src="../../../assets/images/transfer-icon.png" alt="">
+        </div>
+        <form [formGroup]="transferForm" (ngSubmit)="transfer()">
+            <div class="form-group" id="account-id">
+                <label for="account-id">Account ID (Recipient)</label>
+                <input type="number" id="account-id" formControlName="accountId" [ngClass]="{'is-invalid':(transferForm.get('accountId')?.touched || transferForm.get('accountId')?.dirty)
+      && !transferForm.get('accountId')?.valid}" />
+      <span class="invaild-feedback">
+        <span *ngIf="transferForm.get('accountId')?.errors?.required" style="color: red;">
+          Please Enter Account ID
+        </span>
+        <span *ngIf="transferForm.get('accountId')?.errors?.min" style="color: red;">
+          Account ID must be positive
+        </span>
+      </span>    
+            </div>
+            <div class="form-group" id="amount">
+                <label for="amount">Amount (INR)</label>
+                <input type="number" id="amount" formControlName="amount" [ngClass]="{'is-invalid':(transferForm.get('amount')?.touched || transferForm.get('amount')?.dirty)
+      && !transferForm.get('amount')?.valid}" />
+      <span class="invaild-feedback">
+        <span *ngIf="transferForm.get('amount')?.errors?.required" style="color: red;">
+          Please Enter Amount ID
+        </span>
+        <span *ngIf="transferForm.get('amount')?.errors?.min" style="color: red;">
+          Amount must be positive
+        </span>
+      </span>    
+            </div>
+            <div class="form-group" id="a-type">
+                <label for="account-type" class="a-type">Account Type</label>
+                <select id="account-type" class="account-type" formControlName="accountType" 
+                [ngClass]="{'is-invalid':(transferForm.get('accountType')?.touched || transferForm.get('accountType')?.dirty)
+      && !transferForm.get('accountType')?.valid}">
+                    <option>Savings Account</option>
+                    <option>Term Account</option>
+                </select>
+                <span class="invaild-feedback">
+                    <span *ngIf="transferForm.get('accountType')?.errors?.required" style="color: red;">
+                      Please Select Account Type
+                    </span>                   
+                  </span>    
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-outline" id="submit-btn" [disabled]=!transferForm.valid>Transfer</button>
+                    <button type="button" class="btn btn-outline" id="cancel-btn"
+                        routerLink="/home/customerhome">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

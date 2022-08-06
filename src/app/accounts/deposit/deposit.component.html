@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="alert alert-primary" role="alert" id="deposit-alert">
+    {{remarks}}
+  </div>
+  <div class="header">
+    Welcome To Deposit Portal
+  </div>
+  <div class="hero">
+    <div class="icon">
+      <img src="../../../assets/images/deposit_icon.jpg" alt="">
+    </div>
+    <form [formGroup]="depositFrom" (ngSubmit)="deposit()">
+      <div class="form-group" id="amount">
+        <label for="amount">Amount (INR)</label>
+        <input type="number" id="amount" formControlName="amount"
+        [ngClass]="{'is-invalid':(depositFrom.get('amount')?.touched || depositFrom.get('amount')?.dirty)
+      && !depositFrom.get('amount')?.valid}"/>   
+      <span class="invaild-feedback">
+        <span *ngIf="depositFrom.get('amount')?.errors?.required" style="color: red;">
+          Please Enter Some Amount
+        </span>
+        <span *ngIf="depositFrom.get('amount')?.errors?.min" style="color: red;">
+          Amount must be positive
+        </span>
+      </span>    
+      </div>
+      <div class="form-group" id="a-type">
+        <label for="account-type" class="a-type">Account Type</label>
+        <select id="account-type" class="account-type" formControlName="accountType"
+        [ngClass]="{'is-invalid':(depositFrom.get('amount')?.touched || depositFrom.get('amount')?.dirty)
+        && !depositFrom.get('amount')?.valid}">
+          <option>Savings Account</option>
+          <option>Term Account</option>
+        </select>
+        <span class="invaild-feedback">
+          <span *ngIf="depositFrom.get('accountType')?.errors?.required" style="color: red;">
+            Please Select Any Option
+          </span>
+        </span>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-outline" id="submit-btn" [disabled]=!depositFrom.valid>Deposit</button>
+          <button type="button" class="btn btn-outline" id="cancel-btn" routerLink="/home/customerhome">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

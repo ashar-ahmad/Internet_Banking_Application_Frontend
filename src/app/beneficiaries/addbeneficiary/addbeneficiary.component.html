@@ -1,0 +1,109 @@
+<div style="margin-top:100px;margin-left: 100px;"></div>
+<div style="width:800px; margin:0 auto;">
+  <div class="row ">
+    <div class="col-xl-3 col-lg-6">
+      <div class="card l-bg-green-dark">
+        <div class="card-statistic-3 p-4">
+          <div class="card-icon card-icon-large"><i class="fas fa-ticket-alt"></i></div>
+          <div class="mb-4">
+            <h5 class="card-title mb-0">Welcome to Beneficiary Portal</h5>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="margin-top:50px;margin-left: 100px;">
+  <h2 style="color:green ;margin-left: 230px; ">Beneficiary Information <button class="btn btn-danger"
+      style="margin-left:40%;width:100px;height:50px;border-radius: 15px;" routerLink="/customerhome/beneficiaries"
+      >Back</button></h2>
+  <hr style="width: 70%;text-align: center;margin-left: 200px;">
+  <br>
+  <br>
+  <form [formGroup]="addbenForm" (ngSubmit)="onSubmit()">
+    <div class="form-group row" style="margin-left: 400px;">
+      <label for="beneficiaryName" class="col-sm-2 col-form-label"
+        style="font-weight: bold;font-size: 20px;">Name</label>
+      <div class="col-sm-10">
+        <input type="text" formControlName="beneficiaryName" class="form-control" id="benname"
+          placeholder="beneficiaryName(required)" name="beneficiaryName" style="width: 400px;border-radius: 10px;"
+          [ngClass]="{'is-invalid': (addbenForm.get('beneficiaryName')?.touched ||
+        addbenForm.get('beneficiaryName')?.dirty) &&
+        !addbenForm.get('beneficiaryName')?.valid }" />
+        <span class="invalid-feedback">
+          <span *ngIf="addbenForm.get('beneficiaryName')?.errors?.required">
+            Please enter your name
+          </span>
+          <span *ngIf="addbenForm.get('beneficiaryName')?.errors?.minlength">
+            Name must be longer than 3 characters
+          </span>
+        </span>
+      </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;
+    <div class="form-group row" style="margin-left: 400px;">
+      <label for="accountType" class="col-sm-2 col-form-label" style="font-weight: bold;font-size: 20px;">Account
+        Type</label>
+      <div class="col-sm-10">
+        <select formControlName="accountType" id="inputState" class="form-control"
+          style="width: 400px;border-radius: 10px;">
+
+          <option selected>SAVINGS_ACCOUNT</option>
+          <option>TERM_ACCOUNT</option>
+        </select>
+      </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;
+    <div class="form-group row" style="margin-left: 400px;">
+      <label for="beneficiaryAccNo" class="col-sm-2 col-form-label" style="font-weight: bold;font-size: 20px;">Account
+        Number</label>
+      <div class="col-sm-10">
+        <input type="text" formControlName="beneficiaryAccNo" class="form-control" id="accno"
+          placeholder="Account Number(required)" style="width: 400px;border-radius: 10px;" [ngClass]="{'is-invalid': (addbenForm.get('beneficiaryAccNo')?.touched ||
+        addbenForm.get('beneficiaryAccNo')?.dirty) &&
+        !addbenForm.get('beneficiaryAccNo')?.valid }">
+        <span class="invalid-feedback">
+          <span *ngIf="addbenForm.get('beneficiaryAccNo')?.errors?.required">
+            Please enter the Account Number
+          </span>
+          <span *ngIf="addbenForm.get('beneficiaryAccNo')?.errors?.minlength">
+            Account Number must be longer than 0 characters
+          </span>
+        </span>
+      </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;
+    <div class="form-group row" style="margin-left: 400px;">
+      <label for="ifsc" class="col-sm-2 col-form-label" style="font-weight: bold;font-size: 20px;">IFSC</label>
+      <div class="col-sm-10">
+        <input type="text" formControlName="ifsc" class="form-control" id="inputPassword" placeholder="IFSC Code"
+          style="width: 400px;border-radius: 10px;" [ngClass]="{'is-invalid': (addbenForm.get('ifsc')?.touched ||
+        addbenForm.get('ifsc')?.dirty) &&
+        !addbenForm.get('ifsc')?.valid }">
+        <span class="invalid-feedback">
+          <span *ngIf="addbenForm.get('ifsc')?.errors?.required">
+            Please enter the IFSC Code
+          </span>
+        </span>
+      </div>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-success"
+      style="margin-left: 700px;width:100px;height: 50px;border-radius: 15px;"
+      [title]="addbenForm.valid?'Save your eneterd data':'Disabled until the form data is valid'"
+      [disabled]="!addbenForm.valid">
+      Save</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="submit" class="btn btn-danger"
+      style="width:100px;height:50px; margin-left: 100px;border-radius: 15px; " routerLink="/customerhome/beneficiaries"> 
+        Cancel</button>
+  </form>
+</div>
+<!-- <router-outlet></router-outlet>  -->

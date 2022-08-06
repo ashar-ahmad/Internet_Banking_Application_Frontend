@@ -1,0 +1,52 @@
+<section class="admin-home">
+    <div class="container">
+
+        <br>
+        <br>
+        <br>
+        <!-- General Informations -->
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <div class="wrimagecard wrimagecard-topimage">
+                    <a [routerLink]="['customers']">
+                        <div class="wrimagecard-topimage_header" style="background-color:rgba(187, 120, 36, 0.1);height:250px">
+                            <div><i class="fa fa-users" style="color:#BB7824 ; margin-top: 1.2em;"></i></div>
+                        </div>
+                        <div class="wrimagecard-topimage_title">
+                            <h4> View Customers</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="wrimagecard wrimagecard-topimage">
+                    <a [routerLink]="['admins']">
+                        <div class="wrimagecard-topimage_header" style="background-color: rgba(22, 160, 133, 0.1) ;height:250px">
+                            <div><i class="fa fa-user-plus" style="color:#16A085 ; margin-top: 1.2em;"></i></div>
+                        </div>
+                        <div class="wrimagecard-topimage_title">
+                            <h4>View Admins
+                                <div class="pull-right badge" id="WrControls"></div>
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="wrimagecard wrimagecard-topimage">
+                    <a href="#" [routerLink]="['/adminhome/transactions']">
+                        <div class="wrimagecard-topimage_header" style="background-color: rgba(121, 90, 71, 0.1) ;height:250px">
+                            <div><i class="fa fa-area-chart" style="color:#795a47; margin-top: 1.2em;"> </i></div>
+                        </div>
+                        <div class="wrimagecard-topimage_title">
+                            <h4>View All Transactions
+                                <div class="pull-right badge" id="WrNavigation"></div>
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

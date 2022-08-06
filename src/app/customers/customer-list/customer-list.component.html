@@ -1,0 +1,49 @@
+            <app-customer></app-customer>
+            <div class="card" style="width: 1100px; height: auto; margin-top: 40px;">
+                <div class="card-body">
+                    <div style="text-align: center;">
+                        <p>CUSTOMER TABLE</p>
+                    </div>
+                    <div class="table-responsive" id="proTeamScroll" tabindex="2" style="height: 400px;overflow: hidden; outline: none;">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Customer Id</th>
+                                    <th>Customer Name</th>
+                                    <th>Phone Number</th>
+                                    <th>Email Id</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor='let customer of customerList'>
+                                    <td>
+                                        {{customer.userId}}
+                                    </td>
+                                    <td>
+                                        <p class="m-0 font-12">
+                                           {{customer.userName}}
+                                        </p>
+                                    </td>
+                                    <td>{{customer.phoneNo}}</td>
+                                    <td >
+                                        <p>{{customer.emailID}}</p>
+                                    </td>
+                                    <td>
+                                        <p>{{customer.age}}</p>
+                                    </td>
+                                    <td>
+                                        <p>{{customer.gender}}</p>
+                                    </td>
+                                    <td>
+                                        <a data-toggle="tooltip" title="" data-original-title="Edit" [routerLink]="['edit/',customer.userId]"><i class="fas fa-pencil-alt"></i></a>
+                                        <button class='btn btn-danger' (click)="deleteCustomer(customer)"></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>

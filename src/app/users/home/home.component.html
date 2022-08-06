@@ -1,0 +1,235 @@
+<!-- ========================= Hero section Starts =========================== -->
+<section class="login-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center">Login Now</h2>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="text-uppercase">Username</label>
+                    <input type="text" class="form-control" placeholder="" name="userName" [(ngModel)]="userName">
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+                    <input type="password" class="form-control" placeholder="" name="password" [(ngModel)]="password">
+                </div>
+
+                <div class="role-selection">
+                    <label for="role">Select Role:</label>
+                    <input type="radio" id="admin" name="role" value="Admin" [(ngModel)]="isAdmin"
+                        (change)="adminChange()">
+                    <label for="admin">Admin</label>
+                    <input type="radio" id="customer" name="role" value="Customer" [(ngModel)]="isCustomer"
+                        (change)="customerChange()">
+                    <label for="customer">Customer</label><br>
+                </div>
+
+                <br>
+
+                <div class="form-check">
+                    <button (click)=checkLogin() class="btn btn-login float-right">Login</button>
+                </div>
+
+                <br><br><br>
+
+                <p>Don't have account?<a class="ml-2" [routerLink]="['registration']" style="color: #DE6262;">Sign
+                        Up</a></p>
+
+            </div>
+            <div class="col-md-8 banner-sec"></div>
+        </div>
+    </div>
+</section>
+<!-- ========================= Hero section Ends =========================== -->
+
+
+
+<!-- ========================= About Us Starts ============================== -->
+<section class="about-us" id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 mb-5">
+                <h2 class="site-primary-title display-4">Who we are?</h2>                
+                <p>We are industry leading Online Banking Sevice. Our internet banking application is recognised
+                    worldwide for its user friendly interface and the functionalities that it provides to the users.</p>
+
+                <p>The Excel Bank provides low-interest loans, zero to low-interest credits, and grants to developing
+                    countries. These support a wide array of investments in such areas as education, health, public
+                    administration, infrastructure, financial and private sector development, agriculture, and
+                    environmental and natural resource management. Some of our projects are cofinanced with governments,
+                    other multilateral institutions, commercial banks, export credit agencies, and private sector
+                    investors.</p>
+
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6 site-animate img" data-animate-effect="fadeInRight">
+                <img src="https://www.worldfinanceinforms.com/wp-content/uploads/banking/14084/Online_banking.jpg"
+                    alt="image not found">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ========================= About Us Ends ================================ -->
+
+
+
+<!-- ========================= Services Starts =============================== -->
+<section class="service-section" id="services">
+    <div class="container">
+        <h3>services</h3>
+
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-items">
+                    <div class="icon">
+                        <i class="fa fa-rupee"></i>
+                    </div>
+                    <h4>Check you Balance Online</h4>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-items">
+                    <div class="icon">
+                        <i class="fa fa-money"></i>
+                    </div>
+                    <h4> Transfer Money Online</h4>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-items">
+                    <div class="icon">
+                        <i class="fa fa-clock"></i>
+                    </div>
+                    <h4>Time Efficient</h4>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-items">
+                    <div class="icon">
+                        <i class="fa fa-paper-plane"></i>
+                    </div>
+                    <h4>Check Transactions Online</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ========================= About Us Ends ================================= -->
+
+
+
+<!-- ============================ Policies Stats ================================== -->
+<div class="container" id="policies">
+    <h2>Our Policies</h2>
+    <hr>
+    <div class="row">
+        <div class="col-md-4 col-xl-4">
+            <div class="card bg-c-blue order-card">
+                <div class="card-block">
+                    <h3 class="m-b-20">Savings Account</h3>
+                    <p>Minimum balance for Savings account should be maintained. Failing to do so, for every transaction
+                        below minimum balance , a certain fine will be further deducted.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xl-4">
+            <div class="card bg-c-green order-card">
+                <div class="card-block">
+                    <h3 class="m-b-20">Term Account</h3>
+                    <p>Money withdrawal from term account is prohibited before ending of the term. Doing so , a certain
+                        fine will be deducted from the term deposit in case withdrawal is initiated before reaching term
+                        end.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-xl-4">
+            <div class="card bg-c-yellow order-card">
+                <div class="card-block">
+                    <h3 class="m-b-20">Implementation and Training</h3>
+                    <p>Communication to affected personnel is an important part of implementing new or revised policies
+                        and procedures. Documenting, recording and controlling training records is critical to ensure
+                        the success of a compliance audit.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- ============================ Policies Ends ================================== -->
+
+
+
+<!-- ============================== Why Choose Us Stats =========================== -->
+<div class="feat bg-gray pt-5 pb-5" id="why-choose-us">
+    <div class="container">
+        <div class="row">
+            <div class="section-head col-sm-12">
+                <h4><span>Why Choose</span> Us?</h4>
+                <p>We are industry leading Online Banking Sevice. Our internet banking application is recognised
+                    worldwide for its user friendly interface and the functionalities that it provides to the users.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-globe"></i></span>
+                    <h6>Modern Design</h6>
+                    <p>We use latest technology for the latest world because we know the demand of peoples.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-anchor"></i></span>
+                    <h6>Creative Design</h6>
+                    <p>We are always creative and and always lisen our costomers and we mix these two things and
+                        make beast design.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item"> <span class="icon feature_box_col_four"><i class="fa fa-database"></i></span>
+                    <h6>Business Growth</h6>
+                    <p>Everyone wants to live on top of the mountain, but all the happiness and growth occurs while
+                        you're climbing it</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================== Why Choose Us Ends ============================ -->
+
+
+
+<!-- ============================ Contact Us Starts ================================ -->
+<div class="container contact-form" id="contact-us">
+    <div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
+    </div>
+    <form method="post">
+        <h3>Drop Us a Message</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *"
+                        value="" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <textarea name="txtMsg" class="form-control" placeholder="Your Message *"
+                        style="width: 100%; height: 150px;"></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- ============================ Contact Us Ends ================================== -->

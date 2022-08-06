@@ -1,0 +1,54 @@
+<!--- =========================== Navbar Stats =============================== --->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <img src="./assets/images/Excel.jpeg" alt="" width="120"> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a  *ngIf="!loginservice.isUserLoggedIn()" class="nav-link" href="/#login-block">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link" href="/home/#about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link" href="/#services">Services</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link" href="/#policies">Policies</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link" href="/#why-choose-us">Why Choose Us</a>
+            </li>
+            <li class="nav-item">
+                <a *ngIf="!loginservice.isUserLoggedIn()" class="nav-link" href="/#contact-us">Contact Us</a>
+            </li>
+
+            <li class="nav-item">
+                <a *ngIf="loginservice.isUserLoggedIn()" routerLink="/home" class="nav-link" href="" style="margin-left: 60em;">Logout</a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+<!--# =========================== Navbar Ends ================================ -->
+    <router-outlet></router-outlet>
+<!-- =============================== Footer Starts ================================= -->
+<footer class="mainfooter" role="contentinfo">
+    <div class="footer-middle">
+        <div class="container-fluid">
+            
+            <div class="row">
+                <div class="col-md-12 copy">
+                    <p class="text-center">&copy; Copyright 2021 - Ashar Ahmad. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- =============================== Footer Ends =================================== -->4
+
+

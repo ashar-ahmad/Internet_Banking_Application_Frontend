@@ -1,0 +1,114 @@
+.card {
+    border: none;
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+    margin-top:4em;
+    margin-left: 10em;
+    box-shadow: 10px 10px 10px #3E454D;
+}
+
+.fa-ellipsis-v {
+    font-size: 10px;
+    color: #C2C2C4;
+    margin-top: 6px;
+    cursor: pointer
+}
+
+.text-dark {
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 15px;
+    letter-spacing: 0.5px
+}
+
+.card-bottom {
+    background: #3E454D;
+    border-radius: 6px
+}
+
+.flex-column {
+    color: #adb5bd;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.flex-column p {
+    letter-spacing: 1px;
+    font-size: 18px
+}
+
+.btn-secondary {
+    height: 40px !important;
+    margin-top: 3px
+}
+
+.btn-secondary:focus {
+    box-shadow: none
+}
+#term{
+    margin-top: -29.75em;
+    margin-left: 85em;
+    background: linear-gradient(#ff1919,#ff4d4d);
+}
+#saving{
+    background: linear-gradient(#026aa7,#298fca);
+    margin-left: 25em;
+    margin-right: 10em;
+    margin-top: 5em;
+}
+
+
+#header {
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+    width: 800px;
+    height: 100px;
+    margin-left: 0em;
+  }
+  
+  
+  .l-bg-green-dark {
+    background: linear-gradient(to right, #092f81, #3677f0) !important;
+    color: #fff;
+  }
+  
+  .card .card-statistic-3 .card-icon-large .fas, .card .card-statistic-3 .card-icon-large .far, .card .card-statistic-3 .card-icon-large .fab, .card .card-statistic-3 .card-icon-large .fal {
+    font-size: 100px;
+  }
+  
+  .card .card-statistic-3 .card-icon {
+    text-align: center;
+    line-height: 10px;
+    margin-left: 15px;
+    color: #000;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    opacity: 0.1;
+  }
+  
+  
+  .l-bg-green {
+    background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+    color: #fff;
+  }
+
+#back_btn{
+    margin-left: 34em;
+    margin-top: 2em;
+    font-size: 2em;
+    font-weight: bold;
+    width: 10%;
+    font-family:Roboto;
+    border: 3px solid #254e97;
+    color: #254e97;
+    border-radius: 1em;
+}
+#back_btn:hover{
+    background-color: #254e97;
+    color: white;
+}
